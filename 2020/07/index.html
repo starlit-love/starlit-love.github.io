@@ -58,10 +58,10 @@
 
 
 
-<link rel="icon" href="https://starlit.love/wp-content/uploads/2020/07/mado.png" sizes="32x32">
-<link rel="icon" href="https://starlit.love/wp-content/uploads/2020/07/mado.png" sizes="192x192">
-<link rel="apple-touch-icon" href="https://starlit.love/wp-content/uploads/2020/07/mado.png">
-<meta name="msapplication-TileImage" content="https://starlit.love/wp-content/uploads/2020/07/mado.png">
+<link rel="icon" href="https://starlit.love/wp-content/uploads/2020/07/icon.png" sizes="32x32">
+<link rel="icon" href="https://starlit.love/wp-content/uploads/2020/07/icon.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://starlit.love/wp-content/uploads/2020/07/icon.png">
+<meta name="msapplication-TileImage" content="https://starlit.love/wp-content/uploads/2020/07/icon.png">
 		<style type="text/css" id="wp-custom-css">
 			@font-face {
 	font-family: vl;  
@@ -135,6 +135,60 @@ h1 {
 h4.site-description {
 	font-family: "vl";
 	font-size: 16px;
+}
+
+// Scanline Credit: Tsuki from Systemspace
+
+html:not(.no-scanlines):not(.force-no-scanlines) body::before {
+	content: "";
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: calc(100% + 32px);
+	height: calc(100% + 32px);
+	background-image: url("https://starlit.love/wp-content/");
+	background-position: 0 0;
+	background-repeat: repeat;
+	z-index: 10000000;
+	animation: ScanlineAnimationLeft 6.8s linear infinite;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+html:not(.no-scanlines):not(.force-no-scanlines) body::after {
+	content: "";
+	display: block;
+	position: fixed;
+	left: -32px;
+	top: 0;
+	width: calc(100% + 32px);
+	height: calc(100% + 32px);
+	background-image: url("https://starlit.love/wp-content/scanlines.png");
+	background-position: 0 0;
+	background-repeat: repeat;
+	z-index: 10000000;
+	animation: ScanlineAnimationRight 1.7s linear infinite;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+@keyframes ScanlineAnimationLeft {
+	0% {
+		transform: translateX(0px) translateY(0px);
+	}
+	100% {
+		transform: translateX(-32px) translateY(-32px);
+	}
+}
+
+@keyframes ScanlineAnimationRight {
+	0% {
+		transform: translateX(0px) translateY(0px);
+	}
+	100% {
+		transform: translateX(32px) translateY(-32px);
+	}
 }
 		</style>
 		</head>
