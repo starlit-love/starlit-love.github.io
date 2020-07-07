@@ -76,6 +76,10 @@
 	font-weight: normal;  
 }
 
+#page {
+	background-image:url("https://starlit.love/wp-content/uploads/2020/07/553t2.png");
+}
+
 .author vcard {
 	visibility:hidden;
 }
@@ -138,60 +142,34 @@ h4.site-description {
 	font-size: 16px;
 }
 
-// Scanline Credit: Tsuki from Systemspace
+// Scanline Credit: POPCORNS from Systemspace BD Theme
 
-html:not(.no-scanlines):not(.force-no-scanlines) body::before {
-	content: "";
-	display: block;
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: calc(100% + 32px);
-	height: calc(100% + 32px);
-	background-image: url("https://starlit.love/wp-content/");
-	background-position: 0 0;
-	background-repeat: repeat;
-	z-index: 10000000;
-	animation: ScanlineAnimationLeft 6.8s linear infinite;
-	pointer-events: none;
-	opacity: 0.5;
+body:after{content:"";position:fixed;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10000;background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMkMEa+wAAABNSURBVFhH7dYxFQAgDAPRDDjBBf6F0ai4oTdkL+G/QpIcOLkzAJm8GYAMevo2rwH0/mtPA3wD5A7QQN8hDfAN+B9wD2hAAxrQgAZ2G/iMtoQBBwf6rwAAAABJRU5ErkJggg==');background-repeat:repeat;background-position:0px 0px;animation-name:Static;animation-duration:0.8s;animation-iteration-count:infinite;animation-timing-function:steps(4)
 }
 
-html:not(.no-scanlines):not(.force-no-scanlines) body::after {
-	content: "";
-	display: block;
-	position: fixed;
-	left: -32px;
-	top: 0;
-	width: calc(100% + 32px);
-	height: calc(100% + 32px);
-	background-image: url("https://starlit.love/scanlines.png");
-	background-position: 0 0;
-	background-repeat: repeat;
-	z-index: 10000000;
-	animation: ScanlineAnimationRight 1.7s linear infinite;
-	pointer-events: none;
-	opacity: 0.5;
-}
+body:before{content:"";position:fixed;left:0;top:0;width:100%;height:100%;pointer-events:none!important;z-index:10000;background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTJDBGvsAAAANElEQVRYR+3QMREAIAzAwAx4wr+z4qIDP2TPfdVdrvMGNiNAgAABAgQIECBAgAABAgQ+FxirUHYBNbntEAAAAABJRU5ErkJggg==');background-repeat:repeat;background-position:0px 0px;animation-name:Static;animation-duration:2s;animation-iteration-count:infinite;animation-timing-function:steps(4);box-shadow:inset 0px 0px 10em rgba(0,0,0,0.4)}
 
-@keyframes ScanlineAnimationLeft {
-	0% {
-		transform: translateX(0px) translateY(0px);
-	}
-	100% {
-		transform: translateX(-32px) translateY(-32px);
-	}
-}
 
-@keyframes ScanlineAnimationRight {
-	0% {
-		transform: translateX(0px) translateY(0px);
-	}
-	100% {
-		transform: translateX(32px) translateY(-32px);
-	}
+
+@keyframes Static{
+0%{background-position:0px 0px}
+100%{background-position:0px 4px}
 }
-		</style>
+body:after{
+content:"";
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:10000;
+background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMkMEa+wAAABNSURBVFhH7dYxFQAgDAPRDDjBBf6F0ai4oTdkL+G/QpIcOLkzAJm8GYAMevo2rwH0/mtPA3wD5A7QQN8hDfAN+B9wD2hAAxrQgAZ2G/iMtoQBBwf6rwAAAABJRU5ErkJggg==');
+background-repeat:repeat;background-position:0px 0px;
+animation-name:Static;
+animation-duration:0.8s;
+animation-iteration-count:infinite;
+animation-timing-function:steps(4)}		</style>
 		</head>
 
 <body class="archive category category-art category-5 wp-embed-responsive wp-featherlight-captions">
